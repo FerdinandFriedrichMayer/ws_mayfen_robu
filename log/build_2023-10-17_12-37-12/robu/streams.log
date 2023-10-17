@@ -1,0 +1,47 @@
+[1.070s] Invoking command in '/home/robu/work/ws_mayfen_robu/src/robu': PYTHONPATH=/home/robu/work/ws_mayfen_robu/build/robu/prefix_override:/home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robu build --build-base /home/robu/work/ws_mayfen_robu/build/robu/build install --record /home/robu/work/ws_mayfen_robu/build/robu/install.log --single-version-externally-managed
+[1.414s] running egg_info
+[1.415s] creating ../../build/robu/robu.egg-info
+[1.415s] writing ../../build/robu/robu.egg-info/PKG-INFO
+[1.415s] writing dependency_links to ../../build/robu/robu.egg-info/dependency_links.txt
+[1.415s] writing entry points to ../../build/robu/robu.egg-info/entry_points.txt
+[1.416s] writing requirements to ../../build/robu/robu.egg-info/requires.txt
+[1.416s] writing top-level names to ../../build/robu/robu.egg-info/top_level.txt
+[1.416s] writing manifest file '../../build/robu/robu.egg-info/SOURCES.txt'
+[1.418s] reading manifest file '../../build/robu/robu.egg-info/SOURCES.txt'
+[1.418s] writing manifest file '../../build/robu/robu.egg-info/SOURCES.txt'
+[1.419s] running build
+[1.419s] running build_py
+[1.419s] creating /home/robu/work/ws_mayfen_robu/build/robu/build
+[1.419s] creating /home/robu/work/ws_mayfen_robu/build/robu/build/lib
+[1.420s] creating /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu
+[1.420s] copying robu/ex10_wallfollower.py -> /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu
+[1.420s] copying robu/publisher_member_function.py -> /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu
+[1.420s] copying robu/__init__.py -> /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu
+[1.420s] copying robu/subscriber_member_function.py -> /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu
+[1.420s] running install
+[1.421s] running install_lib
+[1.421s] creating /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu
+[1.422s] copying /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu/ex10_wallfollower.py -> /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu
+[1.422s] copying /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu/publisher_member_function.py -> /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu
+[1.422s] copying /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu/__init__.py -> /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu
+[1.422s] copying /home/robu/work/ws_mayfen_robu/build/robu/build/lib/robu/subscriber_member_function.py -> /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu
+[1.423s] byte-compiling /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu/ex10_wallfollower.py to ex10_wallfollower.cpython-310.pyc
+[1.423s] byte-compiling /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+[1.424s] byte-compiling /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu/__init__.py to __init__.cpython-310.pyc
+[1.424s] byte-compiling /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc
+[1.424s] running install_data
+[1.425s] creating /home/robu/work/ws_mayfen_robu/install/robu/share
+[1.425s] creating /home/robu/work/ws_mayfen_robu/install/robu/share/ament_index
+[1.428s] creating /home/robu/work/ws_mayfen_robu/install/robu/share/ament_index/resource_index
+[1.428s] creating /home/robu/work/ws_mayfen_robu/install/robu/share/ament_index/resource_index/packages
+[1.428s] copying resource/robu -> /home/robu/work/ws_mayfen_robu/install/robu/share/ament_index/resource_index/packages
+[1.428s] creating /home/robu/work/ws_mayfen_robu/install/robu/share/robu
+[1.428s] copying package.xml -> /home/robu/work/ws_mayfen_robu/install/robu/share/robu
+[1.428s] running install_egg_info
+[1.428s] Copying ../../build/robu/robu.egg-info to /home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages/robu-0.0.0-py3.10.egg-info
+[1.429s] running install_scripts
+[1.458s] Installing ex10_wallfollower script to /home/robu/work/ws_mayfen_robu/install/robu/lib/robu
+[1.458s] Installing mypublisher script to /home/robu/work/ws_mayfen_robu/install/robu/lib/robu
+[1.459s] Installing mysubscriber script to /home/robu/work/ws_mayfen_robu/install/robu/lib/robu
+[1.459s] writing list of installed files to '/home/robu/work/ws_mayfen_robu/build/robu/install.log'
+[1.512s] Invoked command in '/home/robu/work/ws_mayfen_robu/src/robu' returned '0': PYTHONPATH=/home/robu/work/ws_mayfen_robu/build/robu/prefix_override:/home/robu/work/ws_mayfen_robu/install/robu/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robu build --build-base /home/robu/work/ws_mayfen_robu/build/robu/build install --record /home/robu/work/ws_mayfen_robu/build/robu/install.log --single-version-externally-managed
