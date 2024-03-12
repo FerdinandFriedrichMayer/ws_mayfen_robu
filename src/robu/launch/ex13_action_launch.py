@@ -1,41 +1,41 @@
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, SetEnvironmentVariable
+from launch.actions import ExecuteProcess, SetEnvironmentVariable, DeclareLaunchArgument, IncludeLaunchDescription, LogInfo
 from launch_ros.actions import Node
 
 def generate_launch_description():
    
-    fibonacci_server = os.path.join(
-        os.getcwd(), '/home/robu/work/robu_hoeran19_ws/src/robu/robu/ex12_fibonacci_server.py')
-    fibonacci_client = os.path.join(
-        os.getcwd(), '/home/robu/work/robu_hoeran19_ws/src/robu/robu/ex12_fibonacci_client.py')
-    return LaunchDescription([
+    mypackage = get_package_share_directory('robu')
+
+    envar_domain_id = SetEnvironmentVariable(name='ROS_DOMAIN_ID', value='100')
+
+    node_action_server = Node(
+        package='robu',
+        executable='fibonacci_server',
+        emulate_tty=True,
+        output='screen'
+    )
+    node_action_client = Node(
+        package='robu',
+        executable='fibonacci_client',
+        emulate_tty=True,
+        output='screen'
+    )
     
-        SetEnvironmentVariable('ROS_DOMAIN_ID', '7'),
+    exec_action = ExecuteProcess(
+        cmd=['sleep', '5'],
+        output='screen',
+        on_exit=[ExecuteProcess(
+        cmd=['ros2', 'action', 'send_goal', '--feedback', 'fibonacci', 'robu_interfaces/action/Fibonacci', '{order: 10}'],
+        output='screen'
+    )]
+    )
 
-        Node(
-           package='robu',
-            executable='fibonacci_server',
-            output='screen',
-            name='fibonacci_server'
-        ),
-        
-        Node(
-            package='robu',
-            executable='fibonacci_client',
-            output='screen',
-            name='fibonacci_client'
-        ),
-        
-        ExecuteProcess(
-            cmd=['sleep', '5'],
-            output='screen',
-            name='sleep'
-        ),
-        ExecuteProcess(
-            cmd=['ros2', 'action', 'send_goal', '/fibonacci', 'robu_interfaces/action/Fibonacci', '{order: 5}'],
-            output='screen',
-            name='call_fibonacci_action'
-        )
-    ])
+ld= LaunchDescription()
+ld.add_action(envar_domain_id)
+ld.add_action(node_action_server)
+ld.add_action(node_action_client)
+ld.add_action(exec_action)
 
+return ld

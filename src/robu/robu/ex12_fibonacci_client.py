@@ -47,7 +47,7 @@ def main(args=None):
 
     action_client = FibonacciActionClient()
 
-    action_client.send_goal(10)
+    action_client.send_goal(5)
 
     rclpy.spin(action_client)
 
