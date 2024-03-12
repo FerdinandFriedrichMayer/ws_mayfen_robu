@@ -1,0 +1,7 @@
+/TestParam:
+  ros__parameters:
+    breite: 10.21
+    hoehe: 10.7
+    laenge: 10.0
+    use_sim_time: false
+
