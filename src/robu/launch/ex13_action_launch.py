@@ -32,10 +32,10 @@ def generate_launch_description():
     )]
     )
 
-ld= LaunchDescription()
-ld.add_action(envar_domain_id)
-ld.add_action(node_action_server)
-ld.add_action(node_action_client)
-ld.add_action(exec_action)
+    ld= LaunchDescription()
+    ld.add_action(envar_domain_id)
+    ld.add_action(node_action_server)
+    ld.add_action(node_action_client)
+    ld.add_action(exec_action)
 
-return ld
+    return ld
